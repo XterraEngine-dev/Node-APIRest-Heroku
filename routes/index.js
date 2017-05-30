@@ -18,7 +18,7 @@ api.post('/signin',userCtrl.signIn)
 
 api.get('/private',auth,(req,res)=>{
 
-res.status(200).send({message: ' tienen acceso '})
+res.status(200).send({message: 'tienen acceso'})
 
 })
 
