@@ -1,7 +1,7 @@
 'use strict'
 
-const mongoose = require('moongose')
-const user = require('../models/user')
+
+const User = require('../models/user')
 const service = require('../services')
 
 
@@ -19,7 +19,7 @@ function signUp(req, res) {
     })
 }
 
-function singIn(req, res) {
+function signIn(req, res) {
     User.find({ email: req.body.email }, (err, user) => {
         if (err) return res.status(500).send({ message: err })
 
@@ -36,5 +36,5 @@ function singIn(req, res) {
 module.exports = {
 
     signUp,
-    singIn
+    signIn
 }
